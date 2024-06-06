@@ -4,7 +4,6 @@ import authService from "./appwrite/auth";
 import { login, logout } from "./features/authSlice/authSlice";
 import { Header, Footer } from "./components";
 import { Outlet } from "react-router-dom";
-import { conf } from "./config/config";
 
 function App() {
     const [loading, setLoading] = useState(true);
@@ -31,8 +30,6 @@ function App() {
                     TODO: <Outlet />
                 </main>
                 <Footer />
-
-                {conf.tinymceKey}
             </div>
         </div>
     ) : (
