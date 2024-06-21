@@ -59,7 +59,9 @@ class AuthService {
     async getCurrentUser() {
         try {
             // improve this code, if no current user exist then do something else
-            return await this.account.get();
+            const currentUser = await this.account.get();
+            // console.log(currentUser);
+            return currentUser;
         } catch (error) {
             console.log("Appwrite serive :: getCurrentUser :: error", error);
             // return false;
